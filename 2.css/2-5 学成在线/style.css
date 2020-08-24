@@ -332,3 +332,34 @@ body {
 .links  dd a:hover {
 	color: #004aff;
 }
+
+.sub-l {
+    position: fixed;
+    top: 50%;
+    margin-top: -215px;
+    /* left: 150px; */
+    /* 不能使用left为0 左悬框要与主体的距离保持不变*/
+    left: 50%;
+    margin-left: -800px;
+    /*向右走版心的一半和自身的宽度+一定的间距*/
+    width: 160px;
+    height: 405px;
+    /* 去掉padding */
+    padding-left: 25px;
+    padding-top: 25px;
+    background-color: #fff;
+}
+
+.sub-l ul li{
+    height: 36px;
+}
+
+.sub-l ul li a{
+    font-size: 14px;
+    color: #000;
+}
+
+
+.sub-l ul li a:hover{
+    color: #00a4ff;
+}

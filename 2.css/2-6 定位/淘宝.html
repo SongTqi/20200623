@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+			margin: 0;
+			padding: 0;
+		}
+		li {
+			list-style: none;
+        }
+        /* 子绝父相 */
+        .taobao {
+            position: relative;
+            /* top: 100px; */
+            width: 520px;
+			height: 280px;
+            margin: 100px auto;
+        }
+        .arrow-l, .arrow-r {
+            position: absolute;
+            top: 50%;
+			/*2. 往上走 自己高度 的一半*/
+			margin-top: -15px;
+            width: 20px;
+            height: 30px;
+            text-decoration: none;
+            color: #fff;
+            background-color: rgba(0, 0, 0, .2);
+        }
+        .arrow-l {
+            left: 0;
+            border-top-right-radius: 15px;
+            border-bottom-right-radius: 15px;
+        }
+        .arrow-r {
+            right: 0;
+            border-top-left-radius: 15px;
+            border-bottom-left-radius: 15px;
+            text-align: right;
+        }
+        .arrow-l:hover,
+		.arrow-r:hover {
+			background: rgba(0, 0, 0, .4);
+        }
+        
+        .circle {
+            position: absolute;
+            bottom: 15px;
+            left: 50%;
+            margin-left: -35px;
+            width: 70px;
+            height: 13px;
+            border-radius: 7px;
+            background: rgba(0, 0, 0, .2);
+        }
+
+        .circle li{
+            float: left;
+            width: 8px;
+			height: 8px;
+            background-color: #fff;
+            /* margin-left: 2px; */
+            margin: 3px;
+            border-radius: 50%;
+        }
+        /*current 当前的意思  此处一定要注意 优先级的问题*/
+		.circle .current {
+			background-color: #ff5000;
+        }
+        
+        .circle li:hover {
+            background-color: #ff5000;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="taobao">
+        <!-- 左按钮 -->
+        <a href="#" class="arrow-l"> &lt; </a>
+        <!-- 右按钮 -->
+        <a href="#" class="arrow-r"> &gt; </a>
+        <img src="images/taobao.jpg" alt="">
+        <ul class="circle">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+
+   
+</body>
+
+</html>
