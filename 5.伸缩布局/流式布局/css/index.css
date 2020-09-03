@@ -1,0 +1,246 @@
+body {
+    width: 100%;
+    min-width: 320px;
+    max-width: 640px;
+    margin: 0 auto;
+    font-size: 14px;
+    font-family: -apple-system, Helvetica, sans-serif;
+    color: #666;
+    line-height: 1.5;
+}
+
+div {
+    /* css3 盒子模型 */
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.clearfix::after {
+    contain: "";
+    display: block;
+    height: 0;
+    width: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+
+/* 去掉图片底部空白缝隙 */
+
+img {
+    vertical-align: middle;
+}
+
+div {
+    /* css3 盒子模型 */
+    box-sizing: border-box;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.app {
+    height: 45px;
+    /* 后续会有解决办法 高度暂时写死*/
+}
+
+.app ul li {
+    float: left;
+    height: 45px;
+    background-color: #333;
+    line-height: 45px;
+    text-align: center;
+    color: #fff;
+}
+
+.app ul li:nth-child(1) {
+    width: 8%;
+}
+
+.app ul li:nth-child(1) img {
+    width: 10px;
+}
+
+.app ul li:nth-child(2) {
+    width: 10%;
+}
+
+.app ul li:nth-child(2) img {
+    width: 30px;
+    vertical-align: middle;
+}
+
+.app ul li:nth-child(3) {
+    width: 57%;
+}
+
+.app ul li:nth-child(4) {
+    width: 25%;
+    background-color: #F63515;
+}
+
+.search-wrap {
+    /* position: relative; */
+    position: fixed;
+    /* 子盒子添加了margin-top子盒子的外边距会和父盒子的外边距重叠
+    在父盒子添加overflow:hidden 即可 */
+    overflow: hidden;
+    /* 固定定位的盒子一定要给宽度 */
+    width: 100%;
+    min-width: 320px;
+    max-width: 640px;
+    height: 44px;
+    line-height: 44px;
+}
+
+.search-btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 44px;
+}
+
+.search-btn::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 18px;
+    background: url(../images/s-btn.png) no-repeat;
+    background-size: 20px 18px;
+    margin: 14px 0 0 15px;
+}
+
+.search-login {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 44px;
+    /* background-color: #333; */
+    line-height: 44px;
+    color: #fff;
+}
+
+.search {
+    position: relative;
+    /* 子绝父相 */
+    height: 30px;
+    margin: 0 50px;
+    border-radius: 15px;
+    background-color: #fff;
+    margin-top: 7px;
+    /* 子盒子添加了margin-top子盒子的外边距会和父盒子的外边距重叠
+    在父盒子添加overflow:hidden 即可 */
+}
+
+.jd-icon {
+    width: 20px;
+    height: 15px;
+    position: absolute;
+    top: 8px;
+    left: 13px;
+    background: url(../images/jd.png) no-repeat;
+    background-size: 20px 15px;
+}
+
+.jd-icon::after {
+    /* 父级为jd-icon */
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: -8px;
+    /* 在父盒子外面并向右移动8px */
+    display: block;
+    width: 1px;
+    height: 15px;
+    background-color: #ccc;
+}
+
+.sou {
+    width: 18px;
+    height: 15px;
+    position: absolute;
+    top: 8px;
+    left: 52px;
+    background: url(../images/jd-sprites.png) no-repeat -83px 0px;
+    background-size: 200px 200px;
+}
+
+.slider img {
+    width: 100%;
+    /* 若是背景图可以用background-size */
+}
+
+.brand div {
+    float: left;
+    width: 33.33%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    /*圆角外的内容省略*/
+    overflow: hidden;
+}
+
+.brand div img {
+    width: 100%;
+}
+
+nav {
+    padding-top: 5px;
+}
+
+nav a {
+    /* 有了浮动可以用转换为块元素，宽度就会生效 */
+    /* display: block; */
+    /* position: relative; */
+    float: left;
+    width: 20%;
+    text-align: center;
+}
+
+nav a img {
+    width: 40px;
+    /* height: 40px; */
+    margin: 10px 0;
+}
+
+
+/* 块级元素自动换行向下 */
+
+nav a span {
+    display: block;
+}
+
+.news {
+    margin-top: 20px;
+}
+
+.news a {
+    float: left;
+    box-sizing: border-box;
+}
+
+.news a:nth-of-type(1) {
+    width: 50%;
+}
+
+.news a:nth-of-type(n+2) {
+    width: 25%;
+    border-left: 1px solid #ccc;
+    /* 盒子会掉下去。改为除css3盒子模型 */
+}
+
+.news a img {
+    width: 100%;
+}
