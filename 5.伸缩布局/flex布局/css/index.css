@@ -1,0 +1,36 @@
+body {
+    max-width: 640px;
+    min-width: 320px;
+    margin: 0 auto;
+    font: normal 14px/1.5 Tahoma, "Lucida Grande", Verdana, "Microsoft Yahei", STXihei, hei;
+    color: #000;
+    background: #f2f2f2;
+    overflow-x: hidden;
+    /* x轴的滚动条不显示 */
+    -webkit-tap-highlight-color: transparent;
+    /* 取消点击时的高亮 */
+}
+
+.search-index {
+    /* 固定定位跟父级没有关系，一屏幕为准 */
+    position: fixed;
+    display: flex;
+    top: 0;
+    /* 居中 */
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 640px;
+    min-width: 320px;
+    height: 44px;
+    background-color: palegoldenrod;
+}
+
+.search {
+    flex: 1;
+    background-color: yellowgreen;
+}
+
+.user {
+    height: 44px;
+    width: 44px;
+}
