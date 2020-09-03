@@ -15,12 +15,13 @@ li {
 
 .app {
     height: 45px;
+    /* 后续会有解决办法 高度暂时写死*/
 }
 
 .app ul li {
+    float: left;
     height: 45px;
     background-color: #333;
-    float: left;
     line-height: 45px;
     text-align: center;
     color: #fff;
@@ -53,6 +54,7 @@ li {
 }
 
 .search-wrap {
+    position: fixed;
     height: 44px;
 }
 
@@ -60,8 +62,27 @@ li {
     position: absolute;
     top: 0;
     left: 0;
-    background-color: bisque;
+    background-color: #333;
     width: 40px;
     height: 44px;
-    background: url(../images/s-btn.png) no-repeat;
 }
+
+.search-login {
+    position: absolute;
+    top: 0;
+    right: 0;
+    /* background-color: #333; */
+    width: 40px;
+    height: 44px;
+}
+
+.search {
+    position: relative;
+    height: 30px;
+    /* margin: 0 50px; */
+    border-radius: 15px;
+    background-color: pink;
+    margin-top: 7px;
+}
+
+.search-login {}
